@@ -9,9 +9,9 @@ apt install unzip
 wget https://github.com/erebe/wstunnel/releases/download/v3.0/wstunnel-x64-linux.zip 
 unzip wstunnel-x64-linux.zip
 sudo chmod 755 /srv/wstunnel
+cd /home/ubuntu/my-cloud-init
 sudo ln -sf /srv/wstunnel /usr/bin/wstunnel
-sudo cp wstunnel.service /etc/systemd/system/
-systemctl enable wstunnel && systemctl restart wstunnel
+sudo cp wstunnel.service /etc/systemd/system/wstunnel.service
+sudo systemctl enable wstunnel && sudo systemctl restart wstunnel
 # Setup Openvpn
 
-cd /home/ubuntu
